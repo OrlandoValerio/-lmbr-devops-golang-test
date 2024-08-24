@@ -1,0 +1,14 @@
+# Use a Golang base image
+FROM golang:1.19-alpine
+
+# Create a working directory
+WORKDIR /app
+
+# Copy the built binary to the container
+COPY hello-leroy .
+
+# Expose port 80
+EXPOSE 80
+
+# Run the binary
+CMD ["./hello-leroy"]
